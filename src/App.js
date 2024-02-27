@@ -5,6 +5,7 @@ import SuccessfulRefNo from './pages/SuccessfulRefNo';
 import EWalletTransaction from './pages/EWalletTransaction';
 import CashSendPage from './pages/CashSendPage';
 import ConfirmationPage from './pages/ConfirmationPage';
+import NedBankPage from './pages/NedBank';
 
 function App() {
   const ReadyOptionsPage = ()=>(<OptionsPage 
@@ -12,6 +13,7 @@ function App() {
     eWalletPage={openEWalletPage}
     cashSend={openCashSend}
     confirmationPage={openConfirmationPage}
+    nedBankPage={openNedBank}
     />)
   const [content, setContent] = useState(<ReadyOptionsPage/>);
   function backToHome(){
@@ -28,6 +30,9 @@ function App() {
   }
   function openConfirmationPage(){
     setContent(<ConfirmationPage backHome={backToHome} />)
+  }
+  function openNedBank(){
+    setContent(<NedBankPage backHome={backToHome} />)
   }
   return (
     <div className="App">
