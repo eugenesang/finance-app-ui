@@ -9,7 +9,8 @@ const OptionsPage = ({
     refNoPage,
     eWalletPage,
     cashSend,
-    confirmationPage
+    confirmationPage,
+    nedBankPage
 }) => {
     return ( <section id="options-page">
         <h1>Select page</h1>
@@ -60,7 +61,7 @@ const OptionsPage = ({
                     <img src={nedBankImg} alt="Reference page" />
                 </div>
                 <div className="buttons">
-                    <button>View</button>
+                    <button onClick={nedBankPage}>View</button>
                     <button>Edit</button>
                 </div>
             </div>
