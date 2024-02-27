@@ -37,6 +37,10 @@ function App() {
   return (
     <div className="App">
      {content && content}
+
+     <div className="home-button-container">
+      <button>BUTTON</button>
+     </div>
     </div>
   );
 }
