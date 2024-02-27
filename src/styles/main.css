@@ -70,9 +70,6 @@
 }
 .App #ref-no-page {
   height: 100vh;
-  display: grid;
-  grid-template-rows: repeat(auto, 5), 1fr;
-  gap: 5px;
 }
 .App #ref-no-page::-webkit-scrollbar {
   display: none;
@@ -407,4 +404,119 @@
   display: flex;
   justify-content: space-between;
   color: white;
+}
+.App #ned-bank-page .header {
+  background-image: linear-gradient(to bottom right, #00a84c, #009744, #02602c);
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.App #ned-bank-page .header .top {
+  display: flex;
+  justify-content: flex-end;
+}
+.App #ned-bank-page .header .top svg {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+.App #ned-bank-page .header .content {
+  color: white;
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+}
+.App #ned-bank-page .header .content .tick {
+  font-size: 50px;
+}
+.App #ned-bank-page .header > .bottom {
+  position: absolute;
+  bottom: -40px;
+  right: 50%;
+  transform: translateX(50%);
+  min-width: 400px;
+  max-width: 90vw;
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.137254902);
+}
+.App #ned-bank-page .header > .bottom .right {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.App #ned-bank-page .header > .bottom .right img {
+  width: 60px;
+}
+.App #ned-bank-page .header > .bottom .left .c-top {
+  font-weight: bold;
+  color: #2a2a2a;
+}
+.App #ned-bank-page .header > .bottom .left .c-bottom {
+  color: #7c7b7b;
+}
+.App #ned-bank-page .center-piece {
+  padding: 40px 0px 10px 0px;
+}
+.App #ned-bank-page .center-piece .info-strip {
+  margin: 20px 0px;
+  background-color: #e6f4e3;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  padding: 16px;
+  color: #2f2f2f;
+  gap: 10px;
+}
+.App #ned-bank-page .center-piece .info-strip .icon {
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid gray;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.App #ned-bank-page .bottom-piece {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.137254902);
+}
+.App #ned-bank-page .bottom-piece .content {
+  padding: 5px;
+}
+.App #ned-bank-page .bottom-piece .content .header-text {
+  font-size: 25px;
+  font-weight: bold;
+  color: #545454;
+}
+.App #ned-bank-page .bottom-piece .content .desc {
+  display: grid;
+  gap: 5px;
+  margin: 20px 0px;
+}
+.App #ned-bank-page .bottom-piece .content .desc .info {
+  color: rgb(160, 160, 160);
+  margin: 0px;
+}
+.App #ned-bank-page .bottom-piece .content .desc .value {
+  margin: 0px;
+  font-size: 20px;
+}
+.App #ned-bank-page .bottom-piece .content .button {
+  display: flex;
+  justify-content: flex-end;
+}
+.App #ned-bank-page .bottom-piece .content .button button {
+  font-weight: bold;
+  color: green;
+  background-color: transparent;
+  padding: 5px 10px;
+  border: 2px solid green;
+  border-radius: 10px;
 }/*# sourceMappingURL=main.css.map */

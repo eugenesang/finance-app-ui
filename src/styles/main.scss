@@ -83,9 +83,6 @@
     // reference number page
     #ref-no-page {
         height: 100vh;
-        display: grid;
-        grid-template-rows: repeat(auto, 5), 1fr;
-        gap: 5px;
 
         &::-webkit-scrollbar {
             display: none;
@@ -488,4 +485,143 @@
             }
         }
     }
+
+    // nedbank page
+    #ned-bank-page{
+        .header{
+            background-image: linear-gradient(to bottom right, #00a84c, #009744, #02602c);
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+            position: relative;
+
+            .top{
+                display: flex;
+                justify-content: flex-end;
+
+                svg{
+                    width: 30px;
+                    height: 30px;
+                    margin: 10px;
+                }
+            }
+            .content{
+                color: white;
+                padding: 40px 20px 20px 20px;
+                text-align: center;
+
+                .tick{
+                    font-size: 50px;
+                }
+            }
+
+            &>.bottom{
+                position: absolute;
+                bottom: -40px;
+                right: 50%;
+                transform: translateX(50%);
+                min-width: 400px;
+                max-width: 90vw;
+                background-color: white;
+                padding: 10px;
+                border-radius: 4px;
+                display: grid;
+                grid-template-columns: 70px 1fr;
+                gap: 10px;
+                align-items: center;
+                box-shadow: 0px 2px 8px #00000023;
+
+
+                .right{
+                    height: fit-content;
+                    img{
+                        width: 60px;
+                    }
+                }
+
+                .left{
+                    .c-top{
+                        font-weight: bold;
+                        color: #2a2a2a;
+                    }
+                    .c-bottom{
+                        color: #7c7b7b;
+                    }
+                }
+            }
+        }
+        .center-piece {
+            padding: 40px 0px 10px 0px;
+            
+
+            .info-strip{
+                margin: 20px 0px;
+                background-color: #e6f4e3;
+                display: grid;
+                grid-template-columns: 40px 1fr;
+                padding:16px;
+                color: #2f2f2f;
+                gap: 10px;
+
+                .icon{
+                    font-size: 20px;
+                    width: 30px;
+                    height: 30px;
+                    border: 2px solid gray;
+                    color: gray;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 20px;
+                }
+            }
+        }
+        .bottom-piece{
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px #00000023;
+
+            .content{
+                padding: 5px;
+
+                .header-text{
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: #545454;
+                }
+
+                .desc{
+                    display: grid;
+                    gap: 5px;
+                    margin: 20px 0px;
+
+
+                    .info{
+                        color: rgb(160, 160, 160);
+                        margin: 0px;
+
+                    }
+                    .value{
+                        margin: 0px;
+                        font-size: 20px;
+                    }
+                }
+
+                .button{
+                    display: flex;
+                    justify-content: flex-end;
+
+                    button{
+                        font-weight: bold;
+                        color: green;
+                        background-color: transparent;
+                        padding: 5px 10px;
+                        border: 2px solid green;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+
 }
