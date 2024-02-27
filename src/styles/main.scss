@@ -3,6 +3,21 @@
 }
 
 .App {
+    //home button container
+    .home-button-container {
+        padding: 10px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            padding: 5px;
+            font-weight: bold;
+            max-width: 80vw;
+            min-width: 400px;
+        }
+    }
+
     // options page
     #options-page {
         & > h1 {
@@ -88,109 +103,115 @@
             display: none;
         }
 
-        .header {
-            padding: 10px 10px 60px 10px;
-            text-align: center;
-            background-color: rgb(134, 218, 0);
-            color: white;
-        }
-        .check-mark {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .rounded-border {
-                position: absolute;
-                font-size: 50px;
-                width: 75px;
-                height: 75px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+        .body {
+            .header {
+                padding: 10px 10px 60px 10px;
+                text-align: center;
                 background-color: rgb(134, 218, 0);
-                border: 8px solid white;
-                border-radius: 50px;
                 color: white;
             }
-        }
-
-        .content {
-            margin-top: 50px;
-            margin-bottom: 10px;
-            text-align: center;
-
-            .code {
-                font-weight: bold;
-                font-size: large;
-            }
-        }
-
-        .msg-card {
-            display: grid;
-            grid-template-columns: 8px 1fr 60px;
-            max-width: 400px;
-            margin: 10px auto;
-            border-radius: 5px;
-            border: 1px solid rgb(59, 125, 237);
-            gap: 10px;
-
-            .left-strip {
-                border-radius: 5px 0px 0px 5px;
-                background-color: rgb(59, 125, 237);
-                border: 1px solid rgb(59, 125, 237);
-            }
-
-            .right-icon {
+            .check-mark {
+                position: relative;
                 display: flex;
-                flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
-                font-size: 35px;
-                color: rgb(59, 125, 237);
-            }
-        }
-        .points {
-            max-width: 400px;
-            margin: 10px auto;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
 
-            button {
-                border: none;
-                background-color: transparent;
-                font-size: medium;
-                display: block;
-                text-align: center;
-                color: rgb(59, 125, 237);
-                font-weight: bold;
-            }
-        }
-
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 20px;
-            background-color: whitesmoke;
-
-            button {
-                padding: 8px;
-                font-weight: bold;
-                border-radius: 5px;
-                border: none;
-                background-color: transparent;
-                color: rgb(59, 125, 237);
-                font-size: medium;
-
-                &.share {
-                    background-color: rgb(59, 125, 237);
+                .rounded-border {
+                    position: absolute;
+                    font-size: 50px;
+                    width: 75px;
+                    height: 75px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgb(134, 218, 0);
+                    border: 8px solid white;
+                    border-radius: 50px;
                     color: white;
                 }
             }
+
+            .content {
+                margin-top: 50px;
+                text-align: center;
+
+                .code {
+                    font-weight: bold;
+                    font-size: large;
+                }
+            }
+
+            .msg-card {
+                display: grid;
+                grid-template-columns: 8px 1fr 60px;
+                max-width: 400px;
+                margin: 10px auto;
+                border-radius: 5px;
+                border: 1px solid rgb(59, 125, 237);
+                gap: 10px;
+
+                .left-strip {
+                    border-radius: 5px 0px 0px 5px;
+                    background-color: rgb(59, 125, 237);
+                    border: 1px solid rgb(59, 125, 237);
+                }
+
+                .right-icon {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 35px;
+                    color: rgb(59, 125, 237);
+                }
+            }
+            .points {
+                max-width: 400px;
+                margin: 10px auto;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                    font-size: medium;
+                    display: block;
+                    text-align: center;
+                    color: rgb(59, 125, 237);
+                    font-weight: bold;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px;
+                padding-bottom: 0px;
+                background-color: whitesmoke;
+
+                button {
+                    padding: 8px;
+                    font-weight: bold;
+                    border-radius: 5px;
+                    border: none;
+                    background-color: transparent;
+                    color: rgb(59, 125, 237);
+                    font-size: medium;
+
+                    &.share {
+                        background-color: rgb(59, 125, 237);
+                        color: white;
+                    }
+                }
+            }
+        }
+        .bottom-section{
+            height: 100%;
+            background-color: whitesmoke;
         }
 
         nav {
@@ -376,30 +397,30 @@
             padding: 8px 16px;
             align-items: center;
 
-            .left{
+            .left {
                 font-size: 24px;
             }
         }
-        .content{
+        .content {
             padding: 5px 20px;
 
-            .to, .from{
-
-                p.start-text{
+            .to,
+            .from {
+                p.start-text {
                     color: rgb(51, 51, 51);
                 }
 
-                article.card{
+                article.card {
                     padding: 8px 0px;
                     border: 1px solid #c1c1c1;
                     border-radius: 4px;
-                    .head{
+                    .head {
                         display: grid;
                         grid-template-columns: 50px 1fr;
                         padding: 10px;
                         gap: 10px;
 
-                        .left{
+                        .left {
                             font-size: 30px;
                             width: 45px;
                             height: 45px;
@@ -407,77 +428,76 @@
                             justify-content: center;
                             align-items: center;
                             border-radius: 25px;
-                            
-                            &.one{
+
+                            &.one {
                                 color: white;
                                 background: linear-gradient(rgb(0, 153, 204), rgb(0, 194, 148));
                                 font-size: 25px;
                             }
-                            &.two{
+                            &.two {
                                 font-size: 40px;
                                 color: green;
-
                             }
                         }
 
-                        .right{
-                            .name{
+                        .right {
+                            .name {
                                 font-weight: bold;
                             }
                         }
                     }
 
-                    .amount-strip{
+                    .amount-strip {
                         padding: 10px;
                         font-size: 30px;
                         background-color: #284bff;
                         color: white;
                     }
 
-                    .acc{
-                        color: #7c7b7b
+                    .acc {
+                        color: #7c7b7b;
                     }
 
-                    .rl{
+                    .rl {
                         padding: 5px 10px;
                         display: grid;
                         grid-template-columns: 1fr 1fr;
 
-                        .right{
+                        .right {
                             color: rgb(70, 70, 70);
                         }
-                        .left{
+                        .left {
                             font-weight: bold;
                         }
                     }
 
-                    .foot{
+                    .foot {
                         padding: 12px;
                     }
                 }
             }
 
-            .to{
-                article.card{
-                    .head{
+            .to {
+                article.card {
+                    .head {
                         border-bottom: 1px solid #c1c1c1;
                     }
 
-                    hr{
+                    hr {
                         margin: 10px;
                         background-color: #c1c1c1;
                     }
                 }
             }
         }
-        footer{
+        footer {
             position: absolute;
             bottom: 50px;
             background-color: green;
             padding: 10px 0px;
             width: 100vw;
 
-            .container{
+            .container {
                 padding: 0px 25px;
                 display: flex;
                 justify-content: space-between;
@@ -487,34 +507,36 @@
     }
 
     // nedbank page
-    #ned-bank-page{
-        .header{
+    #ned-bank-page {
+        min-height: 100vh;
+        
+        .header {
             background-image: linear-gradient(to bottom right, #00a84c, #009744, #02602c);
             padding-bottom: 50px;
             margin-bottom: 50px;
             position: relative;
 
-            .top{
+            .top {
                 display: flex;
                 justify-content: flex-end;
 
-                svg{
+                svg {
                     width: 30px;
                     height: 30px;
                     margin: 10px;
                 }
             }
-            .content{
+            .content {
                 color: white;
                 padding: 40px 20px 20px 20px;
                 text-align: center;
 
-                .tick{
+                .tick {
                     font-size: 50px;
                 }
             }
 
-            &>.bottom{
+            & > .bottom {
                 position: absolute;
                 bottom: -40px;
                 right: 50%;
@@ -530,20 +552,19 @@
                 align-items: center;
                 box-shadow: 0px 2px 8px #00000023;
 
-
-                .right{
+                .right {
                     height: fit-content;
-                    img{
+                    img {
                         width: 60px;
                     }
                 }
 
-                .left{
-                    .c-top{
+                .left {
+                    .c-top {
                         font-weight: bold;
                         color: #2a2a2a;
                     }
-                    .c-bottom{
+                    .c-bottom {
                         color: #7c7b7b;
                     }
                 }
@@ -551,18 +572,17 @@
         }
         .center-piece {
             padding: 40px 0px 10px 0px;
-            
 
-            .info-strip{
+            .info-strip {
                 margin: 20px 0px;
                 background-color: #e6f4e3;
                 display: grid;
                 grid-template-columns: 40px 1fr;
-                padding:16px;
+                padding: 16px;
                 color: #2f2f2f;
                 gap: 10px;
 
-                .icon{
+                .icon {
                     font-size: 20px;
                     width: 30px;
                     height: 30px;
@@ -575,43 +595,41 @@
                 }
             }
         }
-        .bottom-piece{
+        .bottom-piece {
             margin: 20px;
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0px 2px 8px #00000023;
 
-            .content{
+            .content {
                 padding: 5px;
 
-                .header-text{
+                .header-text {
                     font-size: 25px;
                     font-weight: bold;
                     color: #545454;
                 }
 
-                .desc{
+                .desc {
                     display: grid;
                     gap: 5px;
                     margin: 20px 0px;
 
-
-                    .info{
+                    .info {
                         color: rgb(160, 160, 160);
                         margin: 0px;
-
                     }
-                    .value{
+                    .value {
                         margin: 0px;
                         font-size: 20px;
                     }
                 }
 
-                .button{
+                .button {
                     display: flex;
                     justify-content: flex-end;
 
-                    button{
+                    button {
                         font-weight: bold;
                         color: green;
                         background-color: transparent;
@@ -623,5 +641,4 @@
             }
         }
     }
-
 }

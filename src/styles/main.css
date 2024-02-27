@@ -2,6 +2,18 @@
   display: none;
 }
 
+.App .home-button-container {
+  padding: 10px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.App .home-button-container button {
+  padding: 5px;
+  font-weight: bold;
+  max-width: 80vw;
+  min-width: 400px;
+}
 .App #options-page > h1 {
   text-align: center;
 }
@@ -74,19 +86,19 @@
 .App #ref-no-page::-webkit-scrollbar {
   display: none;
 }
-.App #ref-no-page .header {
+.App #ref-no-page .body .header {
   padding: 10px 10px 60px 10px;
   text-align: center;
   background-color: rgb(134, 218, 0);
   color: white;
 }
-.App #ref-no-page .check-mark {
+.App #ref-no-page .body .check-mark {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.App #ref-no-page .check-mark .rounded-border {
+.App #ref-no-page .body .check-mark .rounded-border {
   position: absolute;
   font-size: 50px;
   width: 75px;
@@ -99,16 +111,15 @@
   border-radius: 50px;
   color: white;
 }
-.App #ref-no-page .content {
+.App #ref-no-page .body .content {
   margin-top: 50px;
-  margin-bottom: 10px;
   text-align: center;
 }
-.App #ref-no-page .content .code {
+.App #ref-no-page .body .content .code {
   font-weight: bold;
   font-size: large;
 }
-.App #ref-no-page .msg-card {
+.App #ref-no-page .body .msg-card {
   display: grid;
   grid-template-columns: 8px 1fr 60px;
   max-width: 400px;
@@ -117,12 +128,12 @@
   border: 1px solid rgb(59, 125, 237);
   gap: 10px;
 }
-.App #ref-no-page .msg-card .left-strip {
+.App #ref-no-page .body .msg-card .left-strip {
   border-radius: 5px 0px 0px 5px;
   background-color: rgb(59, 125, 237);
   border: 1px solid rgb(59, 125, 237);
 }
-.App #ref-no-page .msg-card .right-icon {
+.App #ref-no-page .body .msg-card .right-icon {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -130,7 +141,7 @@
   font-size: 35px;
   color: rgb(59, 125, 237);
 }
-.App #ref-no-page .points {
+.App #ref-no-page .body .points {
   max-width: 400px;
   margin: 10px auto;
   display: flex;
@@ -139,7 +150,7 @@
   align-items: center;
   gap: 10px;
 }
-.App #ref-no-page .points button {
+.App #ref-no-page .body .points button {
   border: none;
   background-color: transparent;
   font-size: medium;
@@ -148,14 +159,15 @@
   color: rgb(59, 125, 237);
   font-weight: bold;
 }
-.App #ref-no-page .buttons {
+.App #ref-no-page .body .buttons {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 20px;
+  padding-bottom: 0px;
   background-color: whitesmoke;
 }
-.App #ref-no-page .buttons button {
+.App #ref-no-page .body .buttons button {
   padding: 8px;
   font-weight: bold;
   border-radius: 5px;
@@ -164,9 +176,13 @@
   color: rgb(59, 125, 237);
   font-size: medium;
 }
-.App #ref-no-page .buttons button.share {
+.App #ref-no-page .body .buttons button.share {
   background-color: rgb(59, 125, 237);
   color: white;
+}
+.App #ref-no-page .bottom-section {
+  height: 100%;
+  background-color: whitesmoke;
 }
 .App #ref-no-page nav {
   position: fixed;
@@ -327,21 +343,25 @@
 .App #confirmation-page .content {
   padding: 5px 20px;
 }
-.App #confirmation-page .content .to p.start-text, .App #confirmation-page .content .from p.start-text {
+.App #confirmation-page .content .to p.start-text,
+.App #confirmation-page .content .from p.start-text {
   color: rgb(51, 51, 51);
 }
-.App #confirmation-page .content .to article.card, .App #confirmation-page .content .from article.card {
+.App #confirmation-page .content .to article.card,
+.App #confirmation-page .content .from article.card {
   padding: 8px 0px;
   border: 1px solid #c1c1c1;
   border-radius: 4px;
 }
-.App #confirmation-page .content .to article.card .head, .App #confirmation-page .content .from article.card .head {
+.App #confirmation-page .content .to article.card .head,
+.App #confirmation-page .content .from article.card .head {
   display: grid;
   grid-template-columns: 50px 1fr;
   padding: 10px;
   gap: 10px;
 }
-.App #confirmation-page .content .to article.card .head .left, .App #confirmation-page .content .from article.card .head .left {
+.App #confirmation-page .content .to article.card .head .left,
+.App #confirmation-page .content .from article.card .head .left {
   font-size: 30px;
   width: 45px;
   height: 45px;
@@ -350,39 +370,48 @@
   align-items: center;
   border-radius: 25px;
 }
-.App #confirmation-page .content .to article.card .head .left.one, .App #confirmation-page .content .from article.card .head .left.one {
+.App #confirmation-page .content .to article.card .head .left.one,
+.App #confirmation-page .content .from article.card .head .left.one {
   color: white;
   background: linear-gradient(rgb(0, 153, 204), rgb(0, 194, 148));
   font-size: 25px;
 }
-.App #confirmation-page .content .to article.card .head .left.two, .App #confirmation-page .content .from article.card .head .left.two {
+.App #confirmation-page .content .to article.card .head .left.two,
+.App #confirmation-page .content .from article.card .head .left.two {
   font-size: 40px;
   color: green;
 }
-.App #confirmation-page .content .to article.card .head .right .name, .App #confirmation-page .content .from article.card .head .right .name {
+.App #confirmation-page .content .to article.card .head .right .name,
+.App #confirmation-page .content .from article.card .head .right .name {
   font-weight: bold;
 }
-.App #confirmation-page .content .to article.card .amount-strip, .App #confirmation-page .content .from article.card .amount-strip {
+.App #confirmation-page .content .to article.card .amount-strip,
+.App #confirmation-page .content .from article.card .amount-strip {
   padding: 10px;
   font-size: 30px;
   background-color: #284bff;
   color: white;
 }
-.App #confirmation-page .content .to article.card .acc, .App #confirmation-page .content .from article.card .acc {
+.App #confirmation-page .content .to article.card .acc,
+.App #confirmation-page .content .from article.card .acc {
   color: #7c7b7b;
 }
-.App #confirmation-page .content .to article.card .rl, .App #confirmation-page .content .from article.card .rl {
+.App #confirmation-page .content .to article.card .rl,
+.App #confirmation-page .content .from article.card .rl {
   padding: 5px 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.App #confirmation-page .content .to article.card .rl .right, .App #confirmation-page .content .from article.card .rl .right {
+.App #confirmation-page .content .to article.card .rl .right,
+.App #confirmation-page .content .from article.card .rl .right {
   color: rgb(70, 70, 70);
 }
-.App #confirmation-page .content .to article.card .rl .left, .App #confirmation-page .content .from article.card .rl .left {
+.App #confirmation-page .content .to article.card .rl .left,
+.App #confirmation-page .content .from article.card .rl .left {
   font-weight: bold;
 }
-.App #confirmation-page .content .to article.card .foot, .App #confirmation-page .content .from article.card .foot {
+.App #confirmation-page .content .to article.card .foot,
+.App #confirmation-page .content .from article.card .foot {
   padding: 12px;
 }
 .App #confirmation-page .content .to article.card .head {
@@ -404,6 +433,9 @@
   display: flex;
   justify-content: space-between;
   color: white;
+}
+.App #ned-bank-page {
+  min-height: 100vh;
 }
 .App #ned-bank-page .header {
   background-image: linear-gradient(to bottom right, #00a84c, #009744, #02602c);
